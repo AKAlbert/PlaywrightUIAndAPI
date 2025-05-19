@@ -1,0 +1,11 @@
+{
+    "TestDataSet1": {
+        "Skill1": "Playwright",
+        "Skill2": "Cypress"
+    },
+
+    "TestDataSet2": {
+        "Skill1": "Java",
+        "Skill2": "Python"
+    }
+}

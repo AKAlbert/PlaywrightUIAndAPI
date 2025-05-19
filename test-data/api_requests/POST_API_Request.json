@@ -1,0 +1,11 @@
+{
+    "firstName": "AAAA",
+    "lastName": "ABABA",
+    "totalPrice": 1000,
+    "deposited": true,
+    "bookingDates": {
+        "checkin": "2025-01-15",
+        "checkout": "2025-01-17"
+    },
+    "additionalNeeds": "Breakfast"
+}
