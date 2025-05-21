@@ -28,7 +28,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test --grep=PlaywrightAutomation
+        run: npx playwright test --grep=PlaywrightAutomation --reporter=html,junit
         env:
           CI: 'true'
           PW_HEADLESS: '1'
