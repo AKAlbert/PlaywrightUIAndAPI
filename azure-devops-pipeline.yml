@@ -1,0 +1,32 @@
+trigger: 
+- main
+
+pool:
+  vmImage: ububtu-latest
+
+steps: 
+  - task: Nodetool@0
+    inputs: 
+      versionSpec: "18"
+    displayName: "Install Node Js"
+
+  - script: npm ci
+    displayName: "npm ci"
+
+  - script: npx playwright install --with-deps
+    displayName: "Install playwright browsers"
+
+  - script: npx playwright test --grep- PlaywrightAutomation
+    displayName: "Run playwright tests"
+    env: 
+      CI: 'true'
+
+  - task: PublishTestResults@2
+    displayName: 'PublishTestResults'
+    inputs: 
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'junit-test-report.xml'
+      mergeTestResults: true
+      failTaskOnFailedResults: true
+      testRunTitle: 'My End-to-End Tests'
+    condition: succeededOrFailed

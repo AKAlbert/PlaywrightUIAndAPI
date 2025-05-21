@@ -1,7 +1,7 @@
 {
-    "firstname" : "Jim",
-    "lastname" : "Brown",
-    "totalprice" : 111,
+    "firstname" : "PutSample1",
+    "lastname" : "PutBrown",
+    "totalprice" : 12345,
     "depositpaid" : true,
     "bookingdates" : {
         "checkin" : "2018-01-01",

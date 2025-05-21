@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 
 // Write a test
 
-test("My first playwright typescript test", async ({ page }) => {
+test("My first playwright typescript test", {tag: ['@PlaywrightAutomation']}, async ({ page }) => {
   // Go to URL
   await page.goto("https://www.youtube.com/");
 
