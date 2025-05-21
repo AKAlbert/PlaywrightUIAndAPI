@@ -31,6 +31,7 @@ jobs:
         run: npx playwright test --grep=PlaywrightAutomation
         env:
           CI: 'true'
+          PW_HEADLESS: '1'
 
       - name: Upload Playwright HTML report
         if: failure()
